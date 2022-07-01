@@ -9,7 +9,7 @@
   --header-footer-background-color: #A17544;
   --darkolivegreen: #74431D;
   --white: white;
-  --about-me-work-border: #2C1b14;
+  --about-me-border: #2C1b14;
   --rgba-border-color-opacity: rgba(103, 103, 103, 0.672);
 }
 
@@ -107,7 +107,6 @@ footer a {
 .about-me-wrap { 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   justify-content: center;
   margin-top: 50px;
 }
@@ -126,13 +125,15 @@ footer a {
   grid-row: 1 / span 4;
   padding-right: 10px;
   text-align: right;
-  border-right: 2px solid var(--about-me-work-border);
+  border-right: 2px solid var(--about-me-border);
 }
 
 .about-me-paragraph {
   padding-left: 10px;
   grid-column: 2 / span 3;
   grid-row: 1 / span 2;
+  text-align: center;
+  justify-content: center;
 }
 
 /* End of about me section of styling */
@@ -157,16 +158,16 @@ footer a {
 .work-item.work-title {
   padding-top: 10px;
   font-size: 35px;
-  grid-row: 1 / span 9;
+  grid-row: 1 / span 40;
   text-align: right;
   padding-right: 10px;
-  border-right: 2px solid var(--about-me-work-border);
+  border-right: 2px solid var(--about-me-border);
 }
 
 .project-challenge-refactor { 
   opacity: 45%;
   grid-column: 2 / span 6;
-  grid-row: 1 / span 6;
+  grid-row: 1 / span 7;
   background-image: url("../images/Horiseon.jpg");
   background-size: cover;
   display: flex; 
@@ -179,7 +180,7 @@ footer a {
 
 .work-item-project.coming-soon {
   grid-column: 2 /span 1;
-  grid-row: 7 / span 3;
+  grid-row: 8 / span 8;
   background-image: url("../images/coming-soon.jpg");
   background-size: cover;
   display: flex; 
@@ -187,12 +188,11 @@ footer a {
   padding-left: 0px;
   padding-bottom: 25px;
   text-align: left;
-  border: .25vw solid var(--rgba-border-color-opacity);
 }
 
 .work-item-project.coming-soon2 {
   grid-column: 3 / span 1;
-  grid-row: 7 / span 3; 
+  grid-row: 10 / span 3; 
   background-image: url("../images/coming-soon.jpg");
   background-size: cover;
   display: flex; 
@@ -200,7 +200,6 @@ footer a {
   padding-left: 0px;
   padding-bottom: 25px;
   text-align: left;
-  border: .25vw solid var(--rgba-border-color-opacity);
 }
 /* End of projects container/grid */
 
@@ -209,7 +208,6 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
- 
 }
 
 .footer-container { 
@@ -238,3 +236,195 @@ footer a {
   color: var(--darkolivegreen);
 }
 /* End of footer */
+
+/* Start hover effects */
+.effects a:hover{ 
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 100px 0 0 0 #2C1b14;
+    color: white;
+  }
+
+/* Footer hover effects */
+.footer-container a:hover{
+  color: var(--darkolivegreen);
+  font-weight: bold;
+  box-shadow: inset 100px 0 0 0 #2C1b14;
+  color: white;
+}
+/* End of hover effects on all classes */
+
+/* Screen that will be 980px */
+@media screen and (max-width: 980px) {
+  
+  /* Start of footer grid smaller screen code changes at res */
+  header {
+    justify-content: center;
+  }
+
+  header h1 {
+    /* At smaller screens remove space at left of h1 on header */
+    padding-left: 0px;
+  }
+
+  .mountain-subtitle {
+    padding-right: 30px;
+  }
+
+  .mountain {
+  background-attachment: scroll;
+  }
+
+  .about-me-wrapper {
+    margin-top: 20px;
+  }
+
+  .about-me-grid-container {
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px 5px; 
+  }
+
+  .about-me.about-me-title {
+    padding-top: 0px;
+    font-size: 25px;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    text-align: center;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-right: none;
+    border-bottom: 2px solid var(--about-me-border);
+  }
+
+  .about-me-paragraph {
+    padding-top: 5px;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+  }
+
+  .footer-wrapper {
+    margin-top: 20px;
+  }
+
+  .footer-container { 
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5px 2.5px; 
+  }
+
+  .footer.contact-me {
+    padding-top: 0px;
+    font-size: 25px;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    text-align: center;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-right: none;
+    border-bottom: 2px solid var(--darkolivegreen);
+    padding-left: 25px;
+  }
+
+  .footer.effects a {
+    align-self: center;
+  }
+
+}
+
+  /* Screen that will be smaller than 780px */
+  @media screen and (max-width: 768px) {
+  
+    header a {
+      font-size: 3vw;
+    }
+  
+    footer a {
+      font-size: 3vw;
+    }
+  
+    .effects a:hover{
+        font-size: 3vw; 
+    }
+  
+    .footer-container a:hover{
+      font-size: 1.8vw;
+    }
+  
+    .mountain {
+      background-attachment: scroll;
+    }
+      
+    .about-me-grid-container {
+      grid-template-columns: repeat(3, 2fr);
+      grid-template-rows: .5fr repeat(4, 1fr);
+      gap: 5px 5px; 
+    }
+  
+    .about-me {
+      padding-top: 0px;
+      font-size: 25px;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+      text-align: center;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      border-right: none;
+      border-bottom: 2px solid var(--about-me-border);
+      align-self: start;
+    }
+  
+    .about-me.paragraph { =
+      padding-left: 0px;
+    }
+  
+    .work-wrapper {
+      margin-top: 15px;
+    }
+  
+    .work-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: .5fr repeat(10, 1fr);
+      gap: 2.5px 2.5px;
+    }
+  
+    .work-item.work-title {
+      font-size: 35px;
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+      text-align: center;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      border-bottom: 2px solid var(--about-me-border);
+      border-right: none;
+      align-self: start;
+    }
+  
+    .project-challenge-refactor {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 2;
+      align-items: flex-end;
+      text-align: center;
+      background-position: scroll; 
+    }
+  
+    .work-item-project.coming-soon {
+      grid-column: 1 /span 3;
+      grid-row: 5 / span 2;
+      margin-top: -70px;
+      margin-bottom: 20px;
+      /* align-items: flex-end; */
+      /* text-align: center; */
+      background-position: scroll; 
+    }
+
+    .work-item-project.coming-soon2 {
+     grid-column: 1 /span 3;
+      grid-row: 7 / span 1;
+      /* align-items: flex-end; */
+      /* text-align: center; */
+      background-position: scroll; 
+    }
+    
+  }
