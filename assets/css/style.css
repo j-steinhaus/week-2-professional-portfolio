@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global definitions */
+:root {
+  --header-footer-background-color: #A17544;
+  --darkolivegreen: #74431D;
+  --white: white;
+  --about-me-work-border: #2C1b14;
+  --rgba-border-color-opacity: rgba(103, 103, 103, 0.672);
+}
+
+/* Smoth Scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  justify-content: space-between;
+  padding-left: 50px;
+  margin-bottom: 25px;
+  background-color: var(--header-footer-background-color); 
+}
+
+header h1 {
+color: #2C1b14;
+}
+
+header nav ul {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding-right: 0px;
+}
+
+header nav ul li {
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+header a {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--darkolivegreen);
+  color: var(--darkolivegreen);
+}
+/* End of header */
+
+/* Body */
+body{
+  background-color: var(--white); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* End body */
+
+/* Footer */
+footer {
+  background-color: var(--header-footer-background-color); 
+  color: var(--darkolivegreen); 
+}
+
+footer a {
+  text-decoration: none;
+  border-bottom: 2px solid var(--darkolivegreen); 
+  font-size: 15px; 
+  font-weight: bold;
+}
+/* End footer */
+
+/* Styling of headshot */
+.center {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ /* Start of mountain section for background */
+ .mountains { 
+  height: 300px;
+  opacity: 30%;
+  background-image: url("../images/colorado2.jpg");
+  border-bottom-left-radius: 30px 30px; 
+  border-bottom-right-radius: 30px 30px;
+  background-size: cover; 
+  background-attachment: fixed; 
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: flex-end;
+  margin-top: 35px
+}
+
+/* About me section styling */
+.about-me-wrap { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about-me-grid-container {
+  width: 80%; 
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr);
+  grid-template-rows: repeat(4, 1fr); 
+  gap: 10px 10px; 
+}
+
+.about-me.about-me-title { 
+  padding-top: 0px;
+  font-size: 35px;
+  grid-row: 1 / span 4;
+  padding-right: 10px;
+  text-align: right;
+  border-right: 2px solid var(--about-me-work-border);
+}
+
+.about-me-paragraph {
+  padding-left: 10px;
+  grid-column: 2 / span 3;
+  grid-row: 1 / span 2;
+}
+
+/* End of about me section of styling */
+
+/* Start of projects container/grid */
+.work-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.work-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 10px; 
+}
+
+.work-item.work-title {
+  padding-top: 10px;
+  font-size: 35px;
+  grid-row: 1 / span 9;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 2px solid var(--about-me-work-border);
+}
+
+.project-challenge-refactor { 
+  opacity: 45%;
+  grid-column: 2 / span 6;
+  grid-row: 1 / span 6;
+  background-image: url("../images/Horiseon.jpg");
+  background-size: cover;
+  display: flex; 
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: .25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.coming-soon {
+  grid-column: 2 /span 1;
+  grid-row: 7 / span 3;
+  background-image: url("../images/coming-soon.jpg");
+  background-size: cover;
+  display: flex; 
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 25px;
+  text-align: left;
+  border: .25vw solid var(--rgba-border-color-opacity);
+}
+
+.work-item-project.coming-soon2 {
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 3; 
+  background-image: url("../images/coming-soon.jpg");
+  background-size: cover;
+  display: flex; 
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 25px;
+  text-align: left;
+  border: .25vw solid var(--rgba-border-color-opacity);
+}
+/* End of projects container/grid */
+
+/* Start of footer */
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.footer-container { 
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr); 
+  grid-template-rows: repeat(2,1fr); 
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer.contact-me {
+  padding-top: 10px;
+  font-size: 15px;
+  grid-row: 1 / span 3;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 2px solid var(--darkolivegreen);
+}
+
+.footer nav ul a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--darkolivegreen);
+}
+/* End of footer */
