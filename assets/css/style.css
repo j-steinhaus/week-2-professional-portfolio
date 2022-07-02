@@ -390,7 +390,7 @@ footer a {
   .footer.effects a {
     align-self: center;
   }
-
+/* End 980px */
 }
 
   /* Screen that will be smaller than 780px */
@@ -509,5 +509,6 @@ footer a {
       text-align: center;
       background-position: scroll;
      }
+  /* End 780px */
 
   }
